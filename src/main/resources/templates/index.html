@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Home</title>
+		<link th:href="@{/index.css}" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+	</head>
+	<div class="flex-container">
+    	<div class="column">
+    		<div>
+    			<h1>Welcome to Meta!</h1>
+    		</div>
+    		<div>
+    			<div style="margin: 0px 0px 20px 0px;">
+    				<h2 style="font-family: 'Poppins', sans-serif; margin: 0px;">Username</h2>
+    				<input class="credentials" type="text">      			
+    			</div>
+    			<div>
+    				<h2 style="font-family: 'Poppins', sans-serif; margin: 0px;">Password</h2>
+        			<input class="credentials" type="password">
+    			</div>
+        		<br>
+        		<a href="/main" style="text-decoration: none; color: #000000;"><button type="button" style="font-family: 'Poppins', sans-serif;">Sign in</button></a>
+        	</div>
+        	<div>
+        		<h3>Don't have an account?
+        			<a href="/registration" style="text-decoration: none;">Sign up</a>
+        		</h3>
+        	</div>
+    	</div>
+	</div>
+</html>

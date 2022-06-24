@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Sign Up</title>
+		<link th:href="@{/registration.css}" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+	</head>
+	<div class="flex-container">
+		<div>
+			<h1>Create New Account</h1>
+		</div>
+    	<div class="column">
+    		<h1 style="display: inline">Hi, </h1><h1 style="display: inline" th:text="${user.name}"></h1>
+    		<h1>Registered Successfully</h1>
+    	</div>
+    	<div>
+    		<a href="/" style="text-decoration: none; color: #000000;"><button type="button" style="font-family: 'Poppins', sans-serif;">Continue</button></a>
+    	</div>	
+	</div>
+</html>
