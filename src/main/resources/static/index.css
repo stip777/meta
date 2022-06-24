@@ -80,3 +80,7 @@ button {
   	display: inline-block;
   	font-size: 18px;
 }
+
+button:hover {
+	background-color: #f5f5f5;
+}

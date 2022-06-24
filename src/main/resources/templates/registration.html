@@ -1,12 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 	<head>
 		<meta charset="ISO-8859-1">
 		<title>Sign Up</title>
-		<link href="registration.css" rel="stylesheet"/>
+		<link th:href="@{/registration.css}" rel="stylesheet"/>
 		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
 	</head>
-	<h1>Registration Page</h1>
-	<br>
-	<button type="button" style="font-family: 'Poppins', sans-serif;" onClick="window.location.href='index.html'">Continue</button>
+	<div class="flex-container">
+		<div>
+			<h1>Create New Account</h1>
+		</div>
+    	<div class="column">
+    	 <form action="#" th:action="@{/registration}" th:object="${user}" method="post">
+    		<div>
+    			<h2 style="font-family: 'Poppins', sans-serif; margin: 0;">Username</h2>
+    			<input class="credentials" type="text" th:field="*{name}">   
+    			<p th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></p>   			
+    		</div>
+    		<div>
+    			<h2 style="font-family: 'Poppins', sans-serif; margin: 0;">Password</h2>
+        		<input class="credentials" type="password">
+    		</div>
+    		<div>
+    			<h2 style="font-family: 'Poppins', sans-serif; margin: 0;">Confirm Password</h2>
+        		<input class="credentials" type="password">
+        		<button type="submit" value="submit" style="margin-bottom: 20px;">Submit</button>
+    		</div>
+    		</form>
+    	</div>
+    	<div>
+    		<!--<a href="/" style="text-decoration: none; color: #000000;"><button type="button" style="font-family: 'Poppins', sans-serif;">Continue</button></a>-->
+    	</div>	
+	</div>
 </html>

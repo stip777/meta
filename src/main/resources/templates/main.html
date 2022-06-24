@@ -1,10 +1,46 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="ISO-8859-1">
-<title>Meta</title>
-<link href="registration.css" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
-</head>
-	<h1 style="color: #ffffff; font-family: 'Poppins', sans-serif;">Welcome, User!</h1>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Meta</title>
+		<link th:href="@{/main.css}" rel="stylesheet"/>
+		<link th:href="@{/dark-mode.js}" rel="stylesheet"/>
+		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css" integrity="sha384-eoTu3+HydHRBIjnCVwsFyCpUDZHZSFKEJD0mc3ZqSBSb6YhZzRHeiomAUWCstIWo" crossorigin="anonymous"/>
+		<script>
+			function switchMode() {
+  				document.body.classList.toggle("light-mode");
+  				document.querySelector(".item0").classList.toggle("light-mode-1");
+  				document.querySelector("p").classList.toggle("light-mode-2");
+  				document.querySelector("textarea").classList.toggle("light-mode-3");
+			}
+		</script>
+		<script>
+			function logOut() {
+				if (confirm("Are you sure you want to log out?")) {
+					open("/", "_self");
+				}
+			}	
+		</script>		
+	</head>
+	<body>
+		<div class="grid-container">
+			<div class="item0">
+				<p>Welcome, User! <i class="bi bi-123"></i></p>
+				<div>
+					<i class="bi bi-123"></i>
+				</div>
+				<div>
+					<button type="button" onClick="switchMode()">Mode</button>
+					<a style="text-decoration: none; color: #000000;"><button type="button" onClick="logOut()">Log out</button></a>
+				</div>
+			</div>
+			<div class="item1"></div>
+			<div class="item2"></div>
+			<div class="item3"></div>
+			<div class="item4">
+				<textarea></textarea>
+			</div>
+		</div>
+	</body>
 </html>
