@@ -1,7 +1,8 @@
-package com.social.socialMedia;
+package com.social.socialMedia.controller;
 
 import javax.validation.Valid;
 
+import com.social.socialMedia.RegistrationForm;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -42,7 +43,7 @@ public class AppController {
 //		}
 //	}
 	
-	@GetMapping("/registration")
+	@GetMapping("/registerForm")
 	public String register(Model model) {
 		RegistrationForm registrationForm = new RegistrationForm();
 		model.addAttribute("user", registrationForm);
@@ -50,7 +51,7 @@ public class AppController {
 		return "registration";
 	}
 	
-	@PostMapping("/registration")
+	@PostMapping("/register")
 	public String registerSuccess(@ModelAttribute ("user") RegistrationForm registrationForm) {
 		System.out.println(registrationForm);
 		return "registerSuccess";

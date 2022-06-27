@@ -1,5 +1,6 @@
 package com.social.socialMedia.controller;
 
+import com.social.socialMedia.dto.UserDTO;
 import com.social.socialMedia.exception.UserException;
 import com.social.socialMedia.model.User;
 import com.social.socialMedia.repository.UserRepository;
@@ -8,10 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -26,12 +24,16 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
+    @ModelAttribute
+    public UserDTO userDTO(){
+        return new UserDTO();
+    }
     @GetMapping("/users")
     public ResponseEntity<Object> getUsers(){
         return new ResponseEntity<>(userService.getUsers(), HttpStatus.OK);
     }
 
-    @PostMapping("/register")
+    @PostMapping("/registration")
     public ResponseEntity<Object> register(@RequestBody Map<String, String> userDetails) throws UserException {
         // Retrieve username entered
         String username = userDetails.get("username");

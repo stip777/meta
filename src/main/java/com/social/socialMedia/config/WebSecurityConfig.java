@@ -60,8 +60,11 @@ public class WebSecurityConfig {
 
                 .authorizeRequests()
                 .antMatchers("/authenticate").permitAll()
-                .antMatchers("/register").permitAll()
+                .antMatchers("/").permitAll()
+                .antMatchers("/registration").permitAll()
+                .antMatchers("/registerForm").permitAll()
                 .antMatchers(HttpMethod.GET, "/users").authenticated()
+                .antMatchers("/**/*.js", "/**/*.css").permitAll()
                 .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .anyRequest().authenticated().and()
                 .exceptionHandling().authenticationEntryPoint(jwtAuthenticate).and().sessionManagement()
