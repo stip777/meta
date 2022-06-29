@@ -14,12 +14,12 @@
     	 <form action="#" th:action="@{/register}" th:object="${user}" method="post">
     		<div>
     			<h2 style="font-family: 'Poppins', sans-serif; margin: 0;">Username</h2>
-    			<input class="credentials" type="text" th:field="*{username}" required/>
-    			<p th:if="${#fields.hasErrors('username')}" th:errors="*{username}"></p>
+    			<input class="credentials" type="text"  required/>
+    			<p ></p>
     		</div>
     		<div>
     			<h2 style="font-family: 'Poppins', sans-serif; margin: 0;">Password</h2>
-        		<input class="credentials" type="password" th:field="*{password}" required/>
+        		<input class="credentials" type="password" required/>
     		</div>
     		<div>
     			<h2 style="font-family: 'Poppins', sans-serif; margin: 0;">Confirm Password</h2>
