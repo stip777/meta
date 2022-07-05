@@ -11,15 +11,15 @@
 			<h1>Create New Account</h1>
 		</div>
     	<div class="column">
-    	 <form action="#" th:action="@{/register}" th:object="${user}" method="post">
+    	 <form action="#" th:action="@{/registration}" th:object="${user}" method="post">
     		<div>
     			<h2 style="font-family: 'Poppins', sans-serif; margin: 0;">Username</h2>
-    			<input class="credentials" type="text"  required/>
+    			<input class="credentials" type="text"  required th:field="*{username}"/>
     			<p ></p>
     		</div>
     		<div>
     			<h2 style="font-family: 'Poppins', sans-serif; margin: 0;">Password</h2>
-        		<input class="credentials" type="password" required/>
+        		<input class="credentials" type="password" required th:field="*{password}"/>
     		</div>
     		<div>
     			<h2 style="font-family: 'Poppins', sans-serif; margin: 0;">Confirm Password</h2>
