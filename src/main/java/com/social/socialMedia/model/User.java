@@ -16,8 +16,9 @@ public class User {
     private String password;
     @DBRef
     private Set<Role> roles = new HashSet<>();
-    public User() {
-    }
+
+    private Set<Friend> friends = new HashSet<>();
+    public User() {}
 
     public User(String username, String password) {
         this.username = username;
