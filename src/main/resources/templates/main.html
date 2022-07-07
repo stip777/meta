@@ -11,8 +11,9 @@
 			function switchMode() {
   				document.body.classList.toggle("light-mode");
   				document.querySelector(".item0").classList.toggle("light-mode-1");
-  				document.querySelector("p").classList.toggle("light-mode-2");
+  				document.querySelector(".welcome").classList.toggle("light-mode-2");
   				document.querySelector("textarea").classList.toggle("light-mode-3");
+  				document.querySelectorAll(".info").classList.toggle("light-mode-4");
 			}
 		</script>
 		<script>
@@ -21,25 +22,104 @@
 					open("/", "_self");
 				}
 			}	
-		</script>		
+		</script>	
 	</head>
 	<body>
 		<div class="grid-container">
 			<div class="item0">
-				<p>Welcome, User! <i class="bi bi-123"></i></p>
+				<p class="welcome">Welcome, User!</p>
 				<div>
-					<i class="bi bi-123"></i>
 				</div>
 				<div>
-					<button type="button" onClick="switchMode()">Mode</button>
-					<a style="text-decoration: none; color: #000000;"><button type="button" onClick="logOut()">Log out</button></a>
+					<button class="header-button" type="button" onClick="switchMode()">Mode</button>
+					<a style="text-decoration: none; color: #000000;"><button class="header-button" type="button" onClick="logOut()">Log out</button></a>
 				</div>
 			</div>
-			<div class="item1"></div>
+			<div class="item1">
+				<div class="recent-message">
+					<div class="recent-message-pic" style="background-image: url(https://static.wikia.nocookie.net/spongebob/images/d/d7/SpongeBob_stock_art.png);">
+					</div>
+					<div class="recent-message-person">
+						<p class="info">Spongebob Squarepants</p>
+						<p class="info">...</p>
+					</div>				
+				</div>
+				<div class="recent-message">
+					<div class="recent-message-pic" style="background-image: url(https://static.wikia.nocookie.net/spongebob/images/5/5d/Patrick_stock_art.png);">
+					</div>
+					<div class="recent-message-person">
+						<p class="info">Patrick Star</p>
+						<p class="info">...</p>
+					</div>				
+				</div>
+				<div class="recent-message">
+					<div class="recent-message-pic" style="background-image: url(https://static.wikia.nocookie.net/spongebob/images/0/05/Squidward_stock_art.png);">
+					</div>
+					<div class="recent-message-person">
+						<p class="info">Squidward Tentacles</p>
+						<p class="info">...</p>
+					</div>				
+				</div>
+				<div class="recent-message">
+					<div class="recent-message-pic" style="background-image: url(https://static.wikia.nocookie.net/spongebob/images/8/84/Sandy_stock_art.png);">
+					</div>
+					<div class="recent-message-person">
+						<p class="info">Sandy Cheeks</p>
+						<p class="info">...</p>
+					</div>				
+				</div>
+				<div class="recent-message">
+					<div class="recent-message-pic" style="background-image: url(https://static.wikia.nocookie.net/spongebob/images/9/9e/Gary_looking_up_stock_art.png);">
+					</div>
+					<div class="recent-message-person">
+						<p class="info">Gary</p>
+						<p class="info">...</p>
+					</div>				
+				</div>
+				<div class="recent-message">
+					<div class="recent-message-pic" style="background-image: url(https://static.wikia.nocookie.net/spongebob/images/7/7b/Krabs_artwork.png);">
+					</div>
+					<div class="recent-message-person">
+						<p class="info">Mr. Krabs</p>
+						<p class="info">...</p>
+					</div>				
+				</div>
+				<div class="recent-message">
+					<div class="recent-message-pic" style="background-image: url(https://static.wikia.nocookie.net/spongebob/images/7/77/Plankton_stock_art.png);">
+					</div>
+					<div class="recent-message-person">
+						<p class="info">Plankton</p>
+						<p class="info">...</p>
+					</div>				
+				</div>
+				<div class="recent-message">
+					<div class="recent-message-pic" style="background-image: url(https://static.wikia.nocookie.net/spongebob/images/e/ef/SpongeBob_SquarePants_-_Pearl_Krabs_promo_art.png);">
+					</div>
+					<div class="recent-message-person">
+						<p class="info">Pearl</p>
+						<p class="info">...</p>
+					</div>				
+				</div>
+				<div class="recent-message">
+					<div class="recent-message-pic" style="background-image: url(https://static.wikia.nocookie.net/spongebob/images/9/97/Mrs_Puff_stock_art.png);">
+					</div>
+					<div class="recent-message-person">
+						<p class="info">Mrs. Puff</p>
+						<p class="info">...</p>
+					</div>				
+				</div>
+			</div>
 			<div class="item2"></div>
 			<div class="item3"></div>
 			<div class="item4">
-				<textarea></textarea>
+				<div class="chatbox">
+					<textarea></textarea>
+				</div>
+				<div class="extras">
+					<div class="attachments">
+					</div>
+					<button class="enter-message"><i class="bi bi-send" style="color: white;"></i></button>
+				</div>
 			</div>
 		</div>
 	</body>
